@@ -77,6 +77,12 @@ namespace SwoptSharp
             return nodeSet.FindByValue(value) != null;
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            //throw new NotImplementedException();
+            return (IEnumerator<T>)this.nodeSet.GetEnumerator();
+        }
+
         public bool Remove(T value)
         {
             GraphNode<T> nodeToRemove = (GraphNode<T>)nodeSet.FindByValue(value);
@@ -87,7 +93,7 @@ namespace SwoptSharp
 
             nodeSet.Remove(nodeToRemove);
 
-            foreach (GraphNode<T> gnode in nodeSet)
+            foreach (GraphNode<T> gnode in this.nodeSet)
             {
                 int index = gnode.Neighbors.IndexOf(nodeToRemove);
                 if (index != -1)
@@ -96,8 +102,14 @@ namespace SwoptSharp
                     gnode.Costs.RemoveAt(index);
                 }
             }
-            
+
             return true;
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            //throw new NotImplementedException();
+            return this.GetEnumerator();
         }
 
         #endregion Public Methods
