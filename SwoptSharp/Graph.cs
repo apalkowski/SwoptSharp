@@ -53,6 +53,19 @@ namespace SwoptSharp
             from.Costs.Add(cost);
         }
 
+        public void AddDirectedEdge(T fromKey, T toKey, double cost)
+        {
+            GraphNode<T> from = (GraphNode<T>)nodeSet.FindByValue(fromKey);
+            GraphNode<T> to = (GraphNode<T>)nodeSet.FindByValue(toKey);
+
+            if ((from == null) || (to == null))
+            {
+                throw new NodeNotFoundException();
+            }
+
+            AddDirectedEdge(from, to, cost);
+        }
+
         public void AddNode(GraphNode<T> node)
         {
             nodeSet.Add(node);
@@ -70,6 +83,19 @@ namespace SwoptSharp
 
             to.Neighbors.Add(from);
             to.Costs.Add(cost);
+        }
+
+        public void AddUndirectedEdge(T fromKey, T toKey, double cost)
+        {
+            GraphNode<T> from = (GraphNode<T>)nodeSet.FindByValue(fromKey);
+            GraphNode<T> to = (GraphNode<T>)nodeSet.FindByValue(toKey);
+
+            if ((from == null) || (to == null))
+            {
+                throw new NodeNotFoundException();
+            }
+
+            AddUndirectedEdge(from, to, cost);
         }
 
         public bool Contains(T value)

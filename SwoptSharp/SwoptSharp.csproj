@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="GraphNode.cs" />
     <Compile Include="IAgent.cs" />
