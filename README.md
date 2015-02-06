@@ -1,4 +1,4 @@
-# [Sw]arm [opt]imization for C Sharp
+# *Sw*arm *opt*imisation for C *Sharp*
 A collection of swarm intelligence algorithms for general optimisation purposes.
 
 **WORK IN PROGRESS**
