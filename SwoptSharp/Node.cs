@@ -30,6 +30,9 @@
 
         #region Public Properties
 
+        /// <summary>
+        /// A unique key value assigned to the node.
+        /// </summary>
         public T Value
         {
             get { return data; }

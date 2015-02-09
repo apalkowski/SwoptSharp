@@ -43,7 +43,7 @@ namespace SwoptSharp
             }
         }
 
-        new public NodeList<T> Neighbors
+        public new NodeList<T> Neighbors
         {
             get
             {

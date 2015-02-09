@@ -68,11 +68,19 @@ namespace SwoptSharp
 
         public void AddNode(GraphNode<T> node)
         {
+            if (this.Contains(node.Value))
+            {
+                throw new NodeAlreadyExistsException();
+            }
             nodeSet.Add(node);
         }
 
         public void AddNode(T value)
         {
+            if (this.Contains(value))
+            {
+                throw new NodeAlreadyExistsException();
+            }
             nodeSet.Add(new GraphNode<T>(value));
         }
 
