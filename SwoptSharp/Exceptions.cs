@@ -1,17 +1,30 @@
-﻿using System;
+﻿#region License
+
+// SwoptSharp, a collection of swarm intelligence algorithms for general optimisation purposes
+// Copyright (C) 2015  Aleksander Palkowski <http://apalkowski.com>
+// 
+// This program is free software; you can redistribute it and/or modify it under the terms of the
+// GNU General Public License as published by the Free Software Foundation; either version 2 of the
+// License, or (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+// even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+// General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License along with this program; if
+// not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+// 02110-1301 USA.
+
+#endregion License
+
+using System;
 
 namespace SwoptSharp
 {
     [Serializable]
     public class NodeAlreadyExistsException : Exception
     {
-        #region Private Fields
-
         private const string defaultMessage = "There is already a node with the specified key value.";
-
-        #endregion Private Fields
-
-        #region Public Constructors
 
         public NodeAlreadyExistsException()
             : base(defaultMessage)
@@ -33,28 +46,16 @@ namespace SwoptSharp
         {
         }
 
-        #endregion Public Constructors
-
-        #region Protected Constructors
-
         protected NodeAlreadyExistsException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
             : base(info, context)
         {
         }
-
-        #endregion Protected Constructors
     }
 
     [Serializable]
     public class NodeNotFoundException : Exception
     {
-        #region Private Fields
-
         private const string defaultMessage = "Node has not been found.";
-
-        #endregion Private Fields
-
-        #region Public Constructors
 
         public NodeNotFoundException()
             : base(defaultMessage)
@@ -76,15 +77,9 @@ namespace SwoptSharp
         {
         }
 
-        #endregion Public Constructors
-
-        #region Protected Constructors
-
         protected NodeNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
             : base(info, context)
         {
         }
-
-        #endregion Protected Constructors
     }
 }

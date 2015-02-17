@@ -1,4 +1,6 @@
-﻿// SwoptSharp, a collection of swarm intelligence algorithms for general optimization purposes
+﻿#region License
+
+// SwoptSharp, a collection of swarm intelligence algorithms for general optimisation purposes
 // Copyright (C) 2015  Aleksander Palkowski <http://apalkowski.com>
 // 
 // This program is free software; you can redistribute it and/or modify it under the terms of the
@@ -20,16 +22,14 @@
 // Algorithms,” in Unconventional Computation, vol. 4618, S. G. Akl, C. S. Calude, M. J. Dinneen, G.
 // Rozenberg, and H. T. Wareham, Eds. Springer Berlin Heidelberg, 2007, pp. 163–177.
 
+#endregion License
+
 namespace SwoptSharp.RiverFormationDynamics
 {
     public class RiverFormationDynamics
     {
-        #region Public Constructors
-
         public RiverFormationDynamics()
         {
         }
-
-        #endregion Public Constructors
     }
 }

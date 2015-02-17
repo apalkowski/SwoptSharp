@@ -1,5 +1,7 @@
-﻿// SwoptSharp -- a collection of swarm intelligence algorithms for general optimisation purposes
-// Copyright (C) 2015  Aleksander Palkowski
+﻿#region License
+
+// SwoptSharp, a collection of swarm intelligence algorithms for general optimisation purposes
+// Copyright (C) 2015  Aleksander Palkowski <http://apalkowski.com>
 // 
 // This program is free software; you can redistribute it and/or modify it under the terms of the
 // GNU General Public License as published by the Free Software Foundation; either version 2 of the
@@ -13,6 +15,8 @@
 // not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
 // 02110-1301 USA.
 
+#endregion License
+
 using System.Collections.ObjectModel;
 
 namespace SwoptSharp
@@ -23,8 +27,6 @@ namespace SwoptSharp
     /// <typeparam name="T">The value type of nodes in the list.</typeparam>
     public class NodeList<T> : Collection<Node<T>>
     {
-        #region Public Constructors
-
         /// <summary>
         /// Initializes a new instance of the <see cref="NodeList&lt;T&gt;"/> class that is empty
         /// and has the default initial capacity.
@@ -45,10 +47,6 @@ namespace SwoptSharp
             }
         }
 
-        #endregion Public Constructors
-
-        #region Public Methods
-
         /// <summary>
         /// Searches the list for a node with the specified value.
         /// </summary>
@@ -66,7 +64,5 @@ namespace SwoptSharp
 
             return null;
         }
-
-        #endregion Public Methods
     }
 }
